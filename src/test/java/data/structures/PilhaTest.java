@@ -105,16 +105,16 @@ class PilhaTest {
         pilhaOneElementFull.push(elementOne);
 
         Pilha<Integer> pilhaTwoElementsFull = new PilhaImpl<>(2);
-        pilhaOneElementFull.push(elementOne);
-        pilhaOneElementFull.push(elementTwo);
+        pilhaTwoElementsFull.push(elementOne);
+        pilhaTwoElementsFull.push(elementTwo);
 
         Pilha<Integer> pilhaTwoElementsNotFull = new PilhaImpl<>(2);
-        pilhaOneElementFull.push(elementOne);
+        pilhaTwoElementsNotFull.push(elementOne);
 
         return Stream.of(
                 arguments(pilhaOneElementFull, elementOne, true),
                 arguments(pilhaTwoElementsFull, elementTwo, false),
-                arguments(pilhaTwoElementsNotFull, elementOne, false)
+                arguments(pilhaTwoElementsNotFull, elementOne, true)
         );
     }
 
