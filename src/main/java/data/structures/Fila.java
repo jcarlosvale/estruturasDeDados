@@ -8,7 +8,7 @@ public interface Fila<T> {
 
     T front();
 
-    T size();
+    int size();
 
     boolean isEmpty();
 
